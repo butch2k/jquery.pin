@@ -34,7 +34,7 @@
                     parentTop: parentOffset.top
                 });
 
-                $this.css({width: $this.outerWidth()});
+                $this.css({width: $this.innerWidth()});
                 $this.parent().css("height", $this.outerHeight());
             }
         };
