@@ -14,7 +14,13 @@
                     $this.css({width: "", left: "", top: "", position: ""});
                     disabled = true;
                     continue;
-                } else {
+                } else if (options.minHeight && $window.height() <= options.minHeight) {
+                    if ($this.parent().is(".pin-wrapper")) { $this.unwrap(); }
+                    $this.css({width: "", left: "", top: "", position: ""});
+                    disabled = true;
+                    continue;
+                } 
+                else {
                     disabled = false;
                 }
 
